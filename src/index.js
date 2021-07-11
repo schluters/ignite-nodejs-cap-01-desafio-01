@@ -36,7 +36,7 @@ app.post('/users', (request, response) => {
   };
 
   if (user) {
-    return response.status(409).json({ error: `${username} already exists` })
+    return response.status(400).json({ error: `${username} already exists` })
   } else {
     users.push(newUser);
   }
