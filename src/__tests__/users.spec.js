@@ -36,7 +36,7 @@ describe('Users', () => {
         name: 'John Doe',
         username: 'johndoe'
       })
-      .expect(400);
+      .expect(409);
 
     expect(response.body.error).toBeTruthy();
   });
